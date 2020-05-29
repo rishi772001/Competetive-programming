@@ -1,7 +1,5 @@
-s=input()
-
-	
-	
+#https://www.hackerrank.com/challenges/append-and-delete
+s=input()	
 t=input()
 k=int(input())
 moves=0
