@@ -1,3 +1,4 @@
+#https://www.hackerrank.com/challenges/angry-professor
 def calc():
 	inpit1=input().split(" ")
 	n=inpit1[0]
