@@ -1,3 +1,4 @@
+#https://www.hackerrank.com/challenges/ctci-ransom-note/problem
 inp=input()
 st1=input().split(" ")
 c=0
