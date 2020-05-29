@@ -1,3 +1,4 @@
+#Print count of each element of a in b
 n=int(input())
 a=[]
 b=[]
