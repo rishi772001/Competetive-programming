@@ -1,5 +1,6 @@
-def rotate(liat,n):
-	return liat[-n:]+liat[:-n]
+#https://www.hackerrank.com/challenges/circular-array-rotation
+def rotate(list,n):
+	return list[-n:]+list[:-n]
 inpit=input().split(" ")
 n=int(inpit[0])
 k=int(inpit[1])
