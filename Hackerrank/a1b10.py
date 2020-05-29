@@ -1,3 +1,4 @@
+#https://www.geeksforgeeks.org/zoho-interview-set-3-campus/
 s=input()
 a=[]
 b=[]
