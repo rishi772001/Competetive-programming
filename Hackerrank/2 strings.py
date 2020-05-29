@@ -1,3 +1,5 @@
+#https://www.hackerrank.com/challenges/two-strings/problem
+
 def calc():
 	s1=input()
 	s2=input()
