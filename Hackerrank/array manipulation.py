@@ -1,3 +1,4 @@
+#https://www.hackerrank.com/challenges/crush/problem
 def func(arr,a):
 	i=int(a[0])-1
 	while i<int(a[1]):
