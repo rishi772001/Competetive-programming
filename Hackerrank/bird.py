@@ -1,3 +1,4 @@
+#https://www.hackerrank.com/challenges/migratory-birds/
 def most_frequent(List): 
 
     return max(set(List), key = List.count) 
