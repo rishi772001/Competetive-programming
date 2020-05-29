@@ -1,3 +1,4 @@
+#https://www.hackerrank.com/challenges/beautiful-days-at-the-movies
 def reverse(n):
 	rev=0
 	while(n>0):
