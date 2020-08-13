@@ -26,7 +26,7 @@ def reverseList(self):
         return None
 
 
-# {
+#
 #  Driver Code Starts
 # Node Class
 class node:
