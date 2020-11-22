@@ -20,11 +20,10 @@ if __name__ == '__main__':
             if i in '({[':
                 s.push(i)
             if i in ')}]':
-                if s.size() == 0:
+                if dict[s.pop()] != i:
                     flag = False
-                else:
-                    if dict[s.pop()] != i:
-                        flag = False
+        if s.size() == 0:
+            flag = False
         if(flag):
             print("YES")
         else:

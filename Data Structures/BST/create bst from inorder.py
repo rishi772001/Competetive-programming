@@ -1,3 +1,5 @@
+
+
 class node:
     def __init__(self, data):
         self.data = data
@@ -11,22 +13,34 @@ def preorder(root):
         preorder(root.right)
 
 
-def construct(root, arr):
+def construct_inorder(root, arr):
     n = len(arr)
     i = n // 2
     if (i > 0):
         root = node(arr[i])
-        root.left = construct(root.left, arr[:n // 2])
-        root.right = construct(root.right, arr[n // 2:])
+        root.left = construct_inorder(root.left, arr[:n // 2])
+        root.right = construct_inorder(root.right, arr[n // 2:])
+    return root
+
+def construct_preorder(root, arr):
+    if (len(arr) > 0):
+        root = node(arr[0])
+        root.left = construct_preorder(root.left, arr[1:])
+        root.right = construct_preorder(root.right, arr[1:])
     return root
 
 
 if __name__ == '__main__':
-    t = int(input())
+    t = 1
     for _ in range(t):
         root = None
-        n = int(input())
-        arr = list(map(int, input().strip().split()))
+        n = 5
+        arr = [1, 2, 3, 4, 5]
         arr.insert(0, 0)
-        root = construct(root, arr)
+        root = construct_inorder(root, arr)
         preorder(root)
+        print()
+        arr.pop(0)
+        root = construct_preorder(root, arr)
+        preorder(root)
+

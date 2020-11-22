@@ -58,7 +58,8 @@ class linkedlist:
                 btemp = btemp.next
         return a
 
-    def mergeksortedlist(self, arr, k):
+    def mergeksortedlist(self, arr):
+        k = len(arr)
         if k == 1:
             return arr[0]
         elif k == 2:
@@ -66,13 +67,8 @@ class linkedlist:
         else:
             a = arr[:k // 2]
             b = arr[k // 2:]
-            a = self.mergeksortedlist(a, k // 2)
-            if k % 2 != 0:
-                b = self.mergeksortedlist(b, k // 2 + 1)
-            else:
-                b = self.mergeksortedlist(b, k // 2)
-            out = self.merge2list(a, b)
-            return out
+
+            return self.merge2list(self.mergeksortedlist(a), self.mergeksortedlist(b))
 
 
 
@@ -90,6 +86,6 @@ b.insert(4)
 c.insert(2)
 c.insert(6)
 arr = [a,b,c]
-k = 3
-out = a.mergeksortedlist(arr,k)
+
+out = a.mergeksortedlist(arr)
 out.traverse()

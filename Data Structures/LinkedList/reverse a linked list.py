@@ -6,7 +6,6 @@ class node:
         self.next = None
 """
 
-
 # your task is to complete this function
 # function shouldn't return anything
 # use self.head to access head in the method
@@ -17,7 +16,6 @@ def reverseList(self):
     while (curr):
         next = curr.next
         curr.next = prev
-
         prev = curr
         curr = next
     self.head = prev
