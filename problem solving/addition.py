@@ -1,3 +1,4 @@
+# Calculates sum of a list
 def add(a):
     sum=0
     for i in a:

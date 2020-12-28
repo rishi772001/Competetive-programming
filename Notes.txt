@@ -1,0 +1,2 @@
+1. check for odd number => int_variable & 1
+2. sort dict by values => keys = sorted(d, key = d.get)
