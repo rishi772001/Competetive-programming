@@ -1,2 +1,16 @@
 1. check for odd number => int_variable & 1
-2. sort dict by values => keys = sorted(d, key = d.get)
+
+2. key in sorting:
+a = [[1,2], [3,10]]
+
+# sort array with second index
+print(sorted(a, key=lambda x: x[1]))
+
+# sort array with both index
+print(sorted(a, key=lambda x: (x[0],x[1])))
+
+# sort dictionary --- sorted function returns only the sorted order of keys
+1. by key(default) -> sorted(dict)
+2. by value -> sorted(dict, key = lambda x: dict[x])
+3. by value and then key ->sorted(dict, key = lambda x: (dict[x], x))
+
