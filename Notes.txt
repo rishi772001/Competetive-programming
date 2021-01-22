@@ -14,3 +14,7 @@ print(sorted(a, key=lambda x: (x[0],x[1])))
 2. by value -> sorted(dict, key = lambda x: dict[x])
 3. by value and then key ->sorted(dict, key = lambda x: (dict[x], x))
 
+3. (2n!)/((n+1!).n!) => no of unique bsts catalan formula
+
+4. prefix sum:
+sum=0 subarray => prefix sum becomes zero or repeat again
