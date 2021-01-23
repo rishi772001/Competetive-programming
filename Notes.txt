@@ -18,3 +18,5 @@ print(sorted(a, key=lambda x: (x[0],x[1])))
 
 4. prefix sum:
 sum=0 subarray => prefix sum becomes zero or repeat again
+
+5. Binary Search: mid = l + (r - l) // 2 -------> formula to find mid in binary search
