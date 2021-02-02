@@ -25,41 +25,48 @@ class linkedlist:
             temp=temp.next
 
     def calculate(self, first, second):
-        temp1 = first.head
-        temp2 = second.head
-        a = ""
-        b = ""
-        while temp1 and temp2:
-            a += str(temp1.data)
-            b += str(temp2.data)
-            temp1 = temp1.next
-            temp2 = temp2.next
+        carry = 0
+        while first and second:
+            s = str(first.data + second.data + carry)
+            if len(s) > 1:
+                carry = int(s[1:])
+            self.insert(s[0])
 
-        if(temp1 is None):
-            while temp2:
-                b += str(temp2.data)
-                temp2 = temp2.next
+            first = first.next
+            second = second.next
 
-        if (temp2 is None):
-            while temp1:
-                a += str(temp1.data)
-                temp1 = temp1.next
+        while first:
+            s = str(first.data + carry)
+            if len(s) > 1:
+                carry = int(s[1:])
+            self.insert(s[0])
 
-        sum = str(int(a)+int(b))
-        for i in sum:
-            self.insert(int(i))
+            first = first.next
 
+        while second:
+            s = str(second.data + carry)
+            if len(s) > 1:
+                carry = int(s[1:])
+            self.insert(s[0])
 
+            second = second.next
+
+        if carry > 0:
+            carry = str(carry)
+            for i in range(len(carry) - 1, -1, -1):
+                self.insert(carry[i])
 
 
 first = linkedlist()
+first.insert(0)
+first.insert(0)
+first.insert(0)
 first.insert(1)
-first.insert(0)
-first.insert(0)
 second = linkedlist()
+second.insert(0)
+second.insert(0)
 second.insert(1)
-second.insert(0)
-second.insert(0)
+
 third = linkedlist()
-third.calculate(first,second)
+third.calculate(first.head, second.head)
 third.traverse()

@@ -20,3 +20,5 @@ print(sorted(a, key=lambda x: (x[0],x[1])))
 sum=0 subarray => prefix sum becomes zero or repeat again
 
 5. Binary Search: mid = l + (r - l) // 2 -------> formula to find mid in binary search
+
+6. palindrome condition ---> number of characters with odd number of occurences can't exceed 1
