@@ -4,6 +4,6 @@ def solve(lst, p):
         a[p[i]] = lst[i]
     return a
 
-lst = ["a", "b", "c", "d"]
+lst = ["a", "b", "c", "remaining"]
 p = [3, 0, 1, 2]
 print(solve(lst, p))

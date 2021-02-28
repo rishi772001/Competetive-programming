@@ -1,5 +1,4 @@
 #https://www.hackerrank.com/challenges/the-birthday-bar/
-from itertools import combinations
 
 
 # Complete the birthday function below.
@@ -7,7 +6,7 @@ from itertools import combinations
 def birthday(s, d, m):
     count=0
     if(len(s)==m):
-        #if(sum(s)==d):
+        # if(sum(s)==remaining):
         return 1
     for i in range(len(s)-m):
         temp=s[i:i+m]

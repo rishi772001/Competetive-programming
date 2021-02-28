@@ -1,0 +1,72 @@
+NUMBERS:
+
+1. co - prime -> 2 primes if their hcf = 1
+2. div by 4: last 2 digits div by 4
+   div by 6: div by boh 2, 3
+   div by 7: loop (num // 10) - (num % 10 * 2) until 0 or 7
+   div by 8: last 3 digits are divisible by 8
+   div by 11: sum of odd position nos and even pos nos == 0 or multiple of 11
+3. Dividend = (Divisor x Quotient) + Remainder (10 / 3 => 10 - dividend, 3 - divisor)
+4. (xn – an) is divisible by (x – a) for all values of n.
+   (xn – an) is divisible by (x + a) for all even values of n.
+   (xn + an) is divisible by (x + a) for all odd values of n.
+
+---------------------------------
+LCM, HCF:
+
+1. LCM -> least number that divides all the given numbers
+2. HCF/GCD -> largest number that divides all the given numbers
+3. For two numbers ‘a’ and ‘b’, LCM x HCF = a x b
+4. HCF of co-primes = 1
+5. For two fractions, HCF = HCF (Numerators) / LCM (Denominators), LCM = LCM (Numerators) / HCF (Denominators)
+
+----------------------------------
+WORK AND WAGES:
+
+1. person can do a work in 'n' days, then he can do '1/n' work per day
+2. work efficiency formula ==> M1 D1 H1 E1 / W1 = M2 D2 H2 E2 / W2
+    M = Number of workers
+    D = Number of days
+    H = Number of working hours in a day
+    E = Efficiency of workers
+    W = Units of work
+3. A is n times efficient than B,
+    work done = n : 1
+    time taken = 1 : n
+
+----------------------------------
+TIME SPEED DISTANCE
+
+1. Distance = Speed x Time
+2. 1 km/h = 5 / 18 m/s
+3. same distance, speed => x : y, time => y : x
+4. same distance multiple times with diff speeds, avg speed = n / sum(1/si)
+
+---------------------------------
+TRAINS, BOATS AND STREAMS
+
+1. Time taken by a train, ‘t’m long, to pass a stationary object of length ‘l’m = time taken by the train to travel ‘t + l’ meters.
+2. If the speed of boat in still water is B km / hr and speed of the stream is S km / hr,
+    Speed Upstream = B – S km / hr
+    Speed Downstream = B + S km / hr
+3. If the speed upstream is U km / hr and speed downstream is D km / hr,
+    Speed of boat in still water = 0.5 x (D + U) km / hr
+    Speed of stream = 0.5 x (D – U) km / hr
+
+----------------------------------
+PERCENTAGES
+
+1. Expenditure = Price x Consumption
+    If price of an article increases by P %, the necessary reduction in
+    consumption to avoid increase in expenditure = [( P / (100 + P) ) x 100] %
+
+    If price of an article decreases by P %, the necessary increase in
+    consumption to keep the same expenditure = [( P / (100 – P) ) x 100] %
+2. If population/price is P and if it increases by R % every year, then :
+    Population after ‘n’ years = P x [1 + (R / 100)]n
+    Population before ‘n’ years = P / [1 + (R / 100)]n
+3. A successive increase of a% and b% = a + b + ((a x b) / 100) %
+    A successive decrease of a% and b% = a + b – ((a x b) / 100) %
+    A successive increase of a% and decrease of b% = a – b – ((a x b) / 100) %
+    A successive decrease of a% and increase of b% = b – a – ((a x b) / 100) %
+    

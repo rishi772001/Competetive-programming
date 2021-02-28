@@ -4,14 +4,14 @@ https://leetcode.com/problems/3sum/
 '''
 
 
-def three_sum(arr):
+def three_sum(arr, k):
     arr.sort()
     ans = []
     for x in range(len(arr)):
         temp = [arr[x]]
         start = x + 1
         end = len(arr) - 1
-        to_find = 0 - arr[x]
+        to_find = k - arr[x]
         while start < end:
             if arr[start] + arr[end] == to_find:
                 temp += [arr[start], arr[end]]
@@ -26,5 +26,6 @@ def three_sum(arr):
     return ans
 
 
-nums = [-1, 0, 1, 2, -1, -4]  # [-4, -1, -1, 0, 1, 2]
-print(three_sum(nums))
+nums = [2, 0, 1]
+k = 1
+print(three_sum(nums, k))

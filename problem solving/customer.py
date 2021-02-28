@@ -59,8 +59,8 @@ class linked:
             temp=temp.next
         print(count)
     def search(self,n):
-        print("n",n)
-        print("d",self.head.data)
+        print("n", n)
+        print("remaining", self.head.data)
         if(n==self.head.data):
             temp=self.head
             while(temp.next!=None):
