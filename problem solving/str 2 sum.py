@@ -1,11 +1,11 @@
-'''
+"""
 @Author: rishi
-'''
+"""
 
 from collections import defaultdict
 
-array = ["12", "21", "1", "221", "21", "12", "21"]
-x = "1221"
+array = ["12", "12", "22", "11"]
+x = "1212"
 
 remaining = {}
 count = defaultdict(int)
