@@ -1,6 +1,12 @@
 '''
 @Author: rishi
+
+shortest path from src vertex to all other nodes same as dijikstras algorithm
+but includes negative weight edges also
+
+Time complexity = O(VE)
 '''
+import sys
 
 n, edge_len = map(int, input().split())
 # Get edge list
@@ -10,8 +16,9 @@ for i in range(edge_len):
 # create distance array with infinite except src vertex
 distance = {}
 for i in range(2, n + 1):
-    distance[i] = -2**64
+    distance[i] = sys.maxsize
 distance[1] = 0
+
 # Iterate for n - 1 times
 for i in range(1, n-1):
     flag = True

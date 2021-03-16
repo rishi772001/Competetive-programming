@@ -1,0 +1,18 @@
+1. show dbs, collections -> list of dbs, collections
+2. use db_name -> create or switch to given db
+3. db.createCollection(col_name) -> creates a collection
+4. db.col_name.insertOne({.....})   -> inserts document
+   db.col_name.insertMany([{..},{..},{..}])    -> inserts all documents
+5. db.col_name.find()   -> retrieves all data
+   db.col_name.findOne()   -> retrieves one data
+   -> db.col_name.find().limit(num_of_docs)  => like LIMIT
+   -> db.col_name.find().sort({...})  => ORDER BY
+   -> db.col_name.find({"key":"value"})  => like where =
+   -> db.col_name.find({"key":"$lt:value"})  => like where < => gt, in, nin, gte, lte, ne
+   -> db.col_name.find({ $and : [{...}, {...}])  => like where ... and ... => or, not
+
+6. db.col_name.update(<select>, {$set : {...}}) -> replaces existing data
+   db.col_name.save({...}) -> replaces existing with new document
+
+7. db.col_name.createIndex({KEY:1}) -> creates index( fast retrieval) , 1 => asc, -1 => desc
+8. db.col_name.aggregate([{$group : {_id : "$by_user", num_tutorial : {$sum : 1}}}]) => like GROPU BY
