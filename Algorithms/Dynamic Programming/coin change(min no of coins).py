@@ -5,6 +5,12 @@ https://leetcode.com/problems/coin-change/
 
 mini = 2 ** 32
 
+"""
+                                [1,2,5] 0
+                    [1,2] 0                     [1,2,5] 5
+            [1] 0       [1,2] 2             [1,2] 5                     [1,2,5] 10
+        [] 0   [1] 1  [1] 2  [1, 2] 4     [1] 5   [1, 2] 7        [1, 2] 10     [1, 2, 5] 15
+"""
 
 def solve(coins, amount, sum=0):
     global mini
@@ -20,7 +26,7 @@ def solve(coins, amount, sum=0):
     solve(coins[:-1], amount, sum)
 
 
-coins = [2]
-amount = 3
+coins = [1, 5, 2]
+amount = 11
 solve(coins, amount)
 print(mini) if mini < 2 ** 32 else print("-1")

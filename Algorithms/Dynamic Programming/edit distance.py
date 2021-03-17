@@ -1,7 +1,7 @@
 # https://www.geeksforgeeks.org/edit-distance-dp-5/
 
-s1 = "sunday"
-s2 = "saturday"
+s1 = "draw"
+s2 = "dew"
 n = len(s1)
 m = len(s2)
 

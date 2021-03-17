@@ -16,3 +16,5 @@
 
 7. db.col_name.createIndex({KEY:1}) -> creates index( fast retrieval) , 1 => asc, -1 => desc
 8. db.col_name.aggregate([{$group : {_id : "$by_user", num_tutorial : {$sum : 1}}}]) => like GROPU BY
+
+--> con_string => mongodb://localhost:27017/?readPreference=primary&appname=MongoDB%20Compass&ssl=false
