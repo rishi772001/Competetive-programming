@@ -4,6 +4,9 @@
 
 
 # Implement Hashmap with collision using Linear probing
+# closed hashing
+# open addressing
+# no of elements should be less than size of hashmap
 class Hashmap:
     def __init__(self):
         self.MAXSIZE = 5
@@ -11,7 +14,7 @@ class Hashmap:
 
     def find_hash(self, key):
         if type(key) == int:
-            return (2*key+1)%self.MAXSIZE
+            return (2 * key + 1) % self.MAXSIZE
         elif type(key) == str:
             s = 0
             for i in range(len(key)):
