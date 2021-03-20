@@ -26,7 +26,7 @@ def heapify(arr, i=0):
 
 
 # the array to be converted to heap
-array = [1, 3, 5, 4, 6, 13, 10, 9, 8, 15, 17]
+array = [1, 5, 3, 2, 4, 15, 8]
 
 # start from the last internal node because for the function heapify
 # we assume that the sub tree to be a heap
