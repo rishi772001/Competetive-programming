@@ -2,6 +2,7 @@
 @Author: rishi
 '''
 
+
 def a(*args, **kwargs):
     print(args)
     print(kwargs)

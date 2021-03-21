@@ -4,6 +4,7 @@
 
 from oops.class1 import employee as emp
 
+
 # inheritance
 class emputil(emp):
     def __init__(self, name, eno, esal):
@@ -14,6 +15,7 @@ class emputil(emp):
     def increment(self, inc, amt):
         curr = self.get()
         self.set(curr + inc + amt)
+
 
 obj = emputil("rishi", 1, 100)
 obj.increment(10, 10)
