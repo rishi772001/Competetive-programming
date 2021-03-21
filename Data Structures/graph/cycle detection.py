@@ -2,6 +2,7 @@
 @Author: rishi
 
 cycle detection using graph coloring
+Time complexity: O(V + E)
 '''
 
 from collections import defaultdict

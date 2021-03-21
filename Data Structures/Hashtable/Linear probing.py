@@ -28,7 +28,7 @@ class Hashmap:
         flag = True
         for i in range(self.MAXSIZE):
             temp = (h + i) % self.MAXSIZE
-            if self.arr[temp] is None:
+            if self.arr[temp] is None or self.arr[temp] == -1:
                 self.arr[temp] = (key, value)
                 flag = False
                 break
@@ -39,19 +39,32 @@ class Hashmap:
         h = self.find_hash(key)
         for i in range(self.MAXSIZE):
             temp = (h + i) % self.MAXSIZE
-            if self.arr[temp] == None:
+            if self.arr[temp] == -1:
                 continue
+            if self.arr[temp] is None:
+                raise KeyError("Key does not exist")
             if self.arr[temp][0] == key:
                 return self.arr[temp][1]
         raise KeyError("Key does not exist")
 
     def __delitem__(self, key):
         h = self.find_hash(key)
-        for i in range(self.MAXSIZE):
-            if self.arr[i] == None:
+        i = h
+        flag = True
+        while i < h:
+            if self.arr[i] == -1:
                 continue
+            if self.arr[i] is None:
+                raise KeyError("Key does not exist")
             if self.arr[i][0] == key:
-                self.arr[i] = None
+                self.arr[i] = -1
+                flag = False
+
+            i += 1
+            if i > self.MAXSIZE:
+                i = i % self.MAXSIZE
+        if flag:
+            raise KeyError("Key does not exist")
 
     def __str__(self):
         return str(self.arr)

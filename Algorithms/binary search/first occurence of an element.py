@@ -9,8 +9,10 @@ def binary_search(arr, l, r, val, first=True):
         mid = l + (r - l) // 2
         if arr[mid] == val:
             ans = mid
+            # for first value search to the left of curr
             if first:
                 r = mid - 1
+            # for last value search to the right of curr
             else:
                 l = mid + 1
         elif arr[mid] > val:

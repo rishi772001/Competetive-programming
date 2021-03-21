@@ -44,6 +44,7 @@ a = [5, 8, 3]
 val = 5
 pivot = find_pivot(a, 0, len(a) - 1)
 print(pivot)
+# pivot divides the array into two sorted arrays
 if a[0] <= val <= a[pivot]:
     print(binary_search(a, 0, pivot, val))
 else:
