@@ -20,7 +20,7 @@ def min_cost_path_in_dp(cost):
 
     for i in range(1,m):
         for j in range(1,n):
-            arr[i][j] = min(arr[i][j - 1], arr[i - 1][j], arr[i][j - 1]) + cost[i][j]
+            arr[i][j] = min(arr[i][j - 1], arr[i - 1][j]) + cost[i][j]
 
     for i in arr:
         print(i)

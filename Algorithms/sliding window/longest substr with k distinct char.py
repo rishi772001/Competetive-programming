@@ -18,7 +18,7 @@ while end < len(s):
         window[s[end]] += 1
     else:
         window[s[end]] = 1
-    if len(window) > k:
+    while len(window) > k:
         if window[s[start]] == 1:
             window.pop(s[start])
         else:

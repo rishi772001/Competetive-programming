@@ -1,23 +1,4 @@
-class Node:
-    def __init__(self, data):
-        self.data = data
-        self.left = self.right = None
-
-
-def insert(node, root):
-    if root is None:
-        root = node
-    else:
-        if node.data < root.data:
-            if root.left is None:
-                root.left = node
-            else:
-                insert(node, root.left)
-        if node.data > root.data:
-            if root.right is None:
-                root.right = node
-            else:
-                insert(node, root.right)
+from DataStructures.BST.util import *
 
 
 def isleaf(node):
@@ -43,6 +24,7 @@ def hastwochild(node):
         return False
 
 
+# min value node in the right subtree
 def inordersuccessor(root):
     min = root
     while root.left:
@@ -89,5 +71,5 @@ if __name__ == '__main__':
     inorder(root)
     print()
     print("after delete:")
-    delete(50, root)
+    delete(70, root)
     inorder(root)

@@ -31,7 +31,7 @@ class Queue:
     def dequeue(self):
         # condition for empty queue
         if self.front == -1:
-            print("Queue is Empty\n")
+            raise IndexError("Queue is empty")
 
         # condition for only one element
         elif self.front == self.rear:
@@ -43,3 +43,14 @@ class Queue:
             temp = self.queue[self.front]
             self.front = (self.front + 1) % self.size
             return temp
+
+
+q = Queue()
+q.enqueue(1)
+q.enqueue(2)
+q.enqueue(3)
+print(q.dequeue())
+print(q.dequeue())
+print(q.dequeue())
+# Run time exception
+print(q.dequeue())

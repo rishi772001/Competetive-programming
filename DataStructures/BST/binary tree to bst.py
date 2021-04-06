@@ -1,38 +1,42 @@
-class Node:
-    def __init__(self, data):
-        self.data = data
-        self.left = self.right = None
+from DataStructures.BST.util import *
 
 
-def inorder(root):
-    if root:
-        inorder(root.left)
-        print(root.data,end=" ")
-        inorder(root.right)
+def storeInorder(root, inorder):
+    if root is None:
+        return
+
+    storeInorder(root.left, inorder)
+    inorder.append(root.data)
+    storeInorder(root.right, inorder)
 
 
+def arrayToBST(arr, root):
+    # Base Case
+    if root is None:
+        return
 
-def insert(node, root):
-    if (root == None):
-        root = node
-    else:
-        if(node.data < root.data):
-            if root.left is None:
-                root.left = node
-            else:
-                insert(node, root.left)
-        if (node.data > root.data):
-            if root.right is None:
-                root.right = node
-            else:
-                insert(node, root.right)
+    # First update the left subtree
+    arrayToBST(arr, root.left)
+
+    # now update root's data delete the value from array
+    root.data = arr[0]
+    arr.pop(0)
+
+    # Finally update the right subtree
+    arrayToBST(arr, root.right)
 
 
-def postorder(root,arr):
-    if root:
-        postorder(root.left,arr)
-        postorder(root.right,arr)
-        arr.append(root.data)
+def binaryTreeToBST(root):
+    if root is None:
+        return
+
+    # Create the temp array and store the inorder traveral of tree
+    arr = []
+    storeInorder(root, arr)
+    # Sort the array
+    arr.sort()
+    # copy array elements back to binary tree
+    arrayToBST(arr, root)
 
 
 if __name__ == '__main__':
@@ -42,10 +46,6 @@ if __name__ == '__main__':
     root.left.left = Node(20)
     root.right.right = Node(5)
 
-    arr=[]
-    postorder(root,arr)
-    mainroot=Node(arr[0])
-    arr.pop(0)
-    for i in arr:
-        insert(Node(i),mainroot)
-    inorder(mainroot)
+    binaryTreeToBST(root)
+
+    inorder(root)

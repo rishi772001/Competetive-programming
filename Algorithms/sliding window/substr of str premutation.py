@@ -11,7 +11,7 @@ n = len(y)
 window = []
 for i in range(n):
     window.append(x[i])
-if window == y:
+if sorted(window) == sorted(y):
     print(x[0:n])
 
 for i in range(n, len(x)):

@@ -1,14 +1,5 @@
-class Node:
-    def __init__(self, data):
-        self.data = data
-        self.left = self.right = None
+from DataStructures.BST.util import *
 
-
-def inorder(root):
-    if root:
-        inorder(root.left)
-        print(root.data,end=" ")
-        inorder(root.right)
 
 def findPath(root, path, i=0):
     if i >= len(path):
