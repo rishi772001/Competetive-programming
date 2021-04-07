@@ -6,9 +6,7 @@ days=int(input("Enter No of days to be added = "))+d
 
 mo=[31,28,31,30,31,30,31,31,30,31,30,31]
 
-while(days>365):
-    y+=1
-    days-=365
+y = days % 365
     
 while(days>mo[m-1]):
     days-=mo[m-1]

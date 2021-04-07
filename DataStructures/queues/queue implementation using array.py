@@ -1,7 +1,7 @@
 '''
 @Author: rishi
 
-queue implementation using circular queue
+queue implementation using circular array
 '''
 
 

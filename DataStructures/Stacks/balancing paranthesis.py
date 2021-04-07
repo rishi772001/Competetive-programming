@@ -1,20 +1,23 @@
-class stack:
+class Stack:
     def __init__(self):
         self.values = []
+
     def push(self, data):
         self.values.append(data)
+
     def pop(self):
         return self.values.pop()
+
     def size(self):
         return len(self.values)
 
 
 if __name__ == '__main__':
-    dict = {'(':')', '{':'}', '[':']'}
+    dict = {'(': ')', '{': '}', '[': ']'}
 
     for _ in range(1):
         st = "{[](}([)(])[]]})()]){[({]}{{{)({}(][{{[}}(]{"
-        s = stack()
+        s = Stack()
         flag = True
         for i in st:
             if i in '({[':
@@ -22,9 +25,9 @@ if __name__ == '__main__':
             if i in ')}]':
                 if dict[s.pop()] != i:
                     flag = False
-        if s.size() == 0:
+        if s.size() != 0:
             flag = False
-        if(flag):
+        if (flag):
             print("YES")
         else:
             print("NO")

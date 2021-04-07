@@ -7,7 +7,7 @@ def pascal(n):
     elif n == 1:
         a = [[1]]
         return a
-    elif n == 1:
+    elif n == 2:
         a = [[1], [1, 1]]
         return a
     else:
