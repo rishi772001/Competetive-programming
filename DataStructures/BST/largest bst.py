@@ -2,13 +2,7 @@
 @Author: rishi
 https://binarysearch.com/problems/Largest-Binary-Search-Subtree
 '''
-
-
-class Tree:
-    def __init__(self, val, left=None, right=None):
-        self.val = val
-        self.left = left
-        self.right = right
+from DataStructures.BST.util import *
 
 class find_inorder:
     def __init__(self):
@@ -48,9 +42,9 @@ class Solution:
         return self.maxi[1].val
 
 
-node = Tree(1)
-node.left = Tree(3)
-node.left.left = Tree(2)
-node.left.right = Tree(5)
+node = Node(1)
+node.left = Node(3)
+node.left.left = Node(2)
+node.left.right = Node(5)
 s = Solution()
 print(s.solve(node))
