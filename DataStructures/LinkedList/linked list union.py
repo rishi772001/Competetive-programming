@@ -2,12 +2,7 @@
 @Author: rishi
 https://binarysearch.com/problems/Linked-List-Union
 '''
-
-
-class LLNode:
-    def __init__(self, val, next=None):
-        self.val = val
-        self.next = next
+from DataStructures.util.Node import Node as LLNode
 
 
 def solve(self, ll0, ll1):

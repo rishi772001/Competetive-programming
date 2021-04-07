@@ -1,7 +1,4 @@
-class Node:
-    def __init__(self, data=None, next=None):
-        self.data = data
-        self.next = next
+from DataStructures.util.Node import Node
 
 
 class CircularLinkedlist:
@@ -10,7 +7,8 @@ class CircularLinkedlist:
 
     def insert_at_end(self, data):
         if self.head is None:
-            self.head = Node(data, self.head)
+            self.head = Node(data)
+            self.head.next = self.head
             return
         itr = self.head
         while itr.next != self.head:
@@ -26,8 +24,10 @@ class CircularLinkedlist:
             print("The linked list is empty")
             return
         itr = self.head
-        lst = ''
-        while itr:
+        lst = str(itr.data) + '__>'
+        itr = itr.next
+
+        while itr is not self.head:
             lst += str(itr.data) + '__>'
             itr = itr.next
         print(lst)

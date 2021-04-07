@@ -1,11 +1,8 @@
 '''
 @Author: rishi
 '''
-class Tree:
-    def __init__(self, val):
-        self.val = val
-        self.left = None
-        self.right = None
+from DataStructures.BST.util import *
+
 
 def vertical_order(root):
     if root is None:
@@ -13,7 +10,7 @@ def vertical_order(root):
     dist = {}
     q = []
     q.append([root, 0])
-    while (len(q)>0):
+    while (len(q) > 0):
         s = len(q)
         for i in range(s):
             temp, lvl = q.pop(0)
@@ -25,4 +22,11 @@ def vertical_order(root):
                 q.append([temp.right, lvl + 1])
 
     for i in dist:
-        print(dist[i][0])
+        print(dist[i])
+
+
+root = Node(1)
+root.left = Node(2)
+root.left.right = Node(2)
+root.right = Node(3)
+vertical_order(root)

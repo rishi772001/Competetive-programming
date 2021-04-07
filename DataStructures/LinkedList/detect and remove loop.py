@@ -2,12 +2,7 @@
 @Author: rishi
 https://www.geeksforgeeks.org/detect-and-remove-loop-in-a-linked-list/
 '''
-
-
-class Node:
-    def __init__(self, data):
-        self.data = data
-        self.next = None
+from DataStructures.util.Node import Node
 
 
 class LinkedList:

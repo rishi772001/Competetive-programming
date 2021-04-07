@@ -1,7 +1,4 @@
-class node:
-    def __init__(self, data):
-        self.data = data
-        self.left = self.right = None
+from DataStructures.BST.util import *
 
 
 def isopposite(root1, root2):
@@ -9,7 +6,6 @@ def isopposite(root1, root2):
         return True
     if root1 is None or root2 is None:
         return False
-
 
     if root1.data != root2.data:
         return False
@@ -21,6 +17,7 @@ def issymmetric(root):
     if root is None:
         return True
     return isopposite(root.left, root.right)
+
 
 def issymmetric_using_level_order_palindrome_checker(self, root):
     if root is None:
@@ -45,11 +42,11 @@ def issymmetric_using_level_order_palindrome_checker(self, root):
     return True
 
 
-root = node(1)
-root.left = node(2)
-root.right = node(2)
-root.left.left = node(3)
-root.left.right = node(4)
-root.right.left = node(4)
-root.right.right = node(3)
+root = Node(1)
+root.left = Node(2)
+root.right = Node(2)
+root.left.left = Node(3)
+root.left.right = Node(4)
+root.right.left = Node(4)
+root.right.right = Node(3)
 print(issymmetric(root))
