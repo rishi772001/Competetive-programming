@@ -1,10 +1,14 @@
-def permute(arr, l, r):      # n!
+def permute(arr, l, r):  # n!
     if l == r:
         print(arr)
-    for i in range(l,r+1):
+    for i in range(l, r + 1):
         arr[l], arr[i] = arr[i], arr[l]
-        permute(arr, l+1, r)
+        permute(arr, l + 1, r)
         arr[l], arr[i] = arr[i], arr[l]
+
+
+a = [1, 2, 3, 4]
+print(permute(a, 0, 3))
 
 
 def combination(arr, remain, comb, nex):
@@ -24,6 +28,6 @@ def combination(arr, remain, comb, nex):
 
 
 arr = [1, 2, 3]
-permute(arr, 0, 2)
+# permute(arr, 0, 2)
 print("-------------")
-combination(arr, 2, [], 1)
+# combination(arr, 2, [], 1)
